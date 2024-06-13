@@ -4,6 +4,7 @@ import MyFooter from './components/MyFooter';
 import MyNav from './components/MyNav';
 import Welcome from './components/Welcome';
 import AllTheBooks from './components/AllTheBooks';
+import all from './books/all.json';
 import fantasy from './books/fantasy.json';
 import history from './books/history.json';
 import horror from './books/horror.json';
@@ -32,7 +33,7 @@ function App() {
         <Container className="my-3">
            <Welcome />
            <Routes>
-              <Route index element={<AllTheBooks books={fantasy} searchQuery={search} />} />
+              <Route index element={<AllTheBooks books={all} searchQuery={search} />} />
               <Route path='/details/:asin' element={<BookDetail />} />
               <Route path='*' element={<NotFound />} />
            </Routes>

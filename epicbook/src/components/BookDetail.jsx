@@ -1,13 +1,13 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import fantasy from '../books/fantasy.json';
+import all from '../books/all.json';
 import { Card, Col, ListGroup, Row } from 'react-bootstrap';
 import CommentArea from './CommentArea';
 
 export default function BookDetail() {
 
     const { asin } = useParams();
-    const book = fantasy.find( b => b.asin === asin); // {} || undefined
+    const book = all.find( b => b.asin === asin); // {} || undefined
     
     console.log(book)
   return (
