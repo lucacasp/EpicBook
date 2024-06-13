@@ -5,9 +5,9 @@ import MyNav from './components/MyNav';
 import Welcome from './components/Welcome';
 import AllTheBooks from './components/AllTheBooks';
 import all from './books/all.json';
-import fantasy from './books/fantasy.json';
+/* import fantasy from './books/fantasy.json';
 import history from './books/history.json';
-import horror from './books/horror.json';
+import horror from './books/horror.json'; */
 import { useState } from 'react';
 import UserComponent from './components/UserComponent';
 import { ThemeContext, AuthContext } from './modules/Contexts';

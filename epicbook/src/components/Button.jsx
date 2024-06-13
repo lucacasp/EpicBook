@@ -4,6 +4,7 @@ import { Button } from 'react-bootstrap';
 const GenreButtons = ({ setType }) => {
   return (
     <div className='div-button'>
+      <Button variant="dark" className="m-1" onClick={() => setType('all')}>All</Button>
       <Button variant="dark" className='m-1' onClick={() => setType('history')}>History</Button>
       <Button variant="dark" className='m-1' onClick={() => setType('fantasy')}>Fantasy</Button>
       <Button variant="dark" className='m-1' onClick={() => setType('horror')}>Horror</Button>
