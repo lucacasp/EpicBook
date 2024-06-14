@@ -22,13 +22,11 @@ function App() {
 
   let [theme, setTheme] = useState('light');
   let [authUser, setAuthUser] = useState('Pasquale La Ricotta');
-
   return (
     <>
     <ThemeContext.Provider value={[theme, setTheme]}>
       <AuthContext.Provider value={[authUser]}>
         <BrowserRouter>
-
         <MyNav search={search} handleSearch={handleSearch} /> 
         <Container className="my-3">
            <Welcome />
@@ -37,15 +35,6 @@ function App() {
               <Route path='/details/:asin' element={<BookDetail />} />
               <Route path='*' element={<NotFound />} />
            </Routes>
-          {/*
-          <Button variant="dark" className='m-1' onClick={() => setType('history')}>History</Button>
-          <Button variant="dark" className='m-1' onClick={() => setType('fantasy')}>Fantasy</Button>
-          <Button variant="dark" className='m-1' onClick={() => setType('horror')}>Horror</Button>
-          {type === 'fantasy' && <AllTheBooks books={fantasy} searchQuery={search} />}
-          {type === 'history' && <AllTheBooks books={history} searchQuery={search} /> }
-          {type === 'horror' && <AllTheBooks books={horror} searchQuery={search} /> } */}
-
-          {/* <UserComponent /> */}
         </Container>
         <MyFooter />
 

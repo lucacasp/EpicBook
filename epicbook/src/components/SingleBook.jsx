@@ -20,6 +20,9 @@ export default function SingleBook({ book, selected, setSelected }) {
         <Card.Img variant="top" src={book.img} />
         <Card.Body>
           <Card.Title>{book.title}</Card.Title>
+          <Card.Text>
+            € {book.price}
+          </Card.Text>
           <Button 
             className="btn btn-dark w-100 my-2"
             onClick={() => navigate('/details/'+book.asin)}
