@@ -14,9 +14,10 @@ import { ThemeContext, AuthContext } from './modules/Contexts';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NotFound from './components/NotFound';
 import BookDetail from './components/BookDetail';
+import GenreButtons from './components/Button.jsx';
 
 function App() {
-  let [type, setType] = useState('fantasy');
+  let [type, setType] = useState('all');
   const [search, setSearch] = useState('');
   const handleSearch = (e) => setSearch(e.target.value);
 
@@ -29,6 +30,7 @@ function App() {
         <BrowserRouter>
         <MyNav search={search} handleSearch={handleSearch} /> 
         <Container className="my-3">
+           <GenreButtons type={type} setType={setType} />
            <Welcome />
            <Routes>
               <Route index element={<AllTheBooks books={all} searchQuery={search} />} />
