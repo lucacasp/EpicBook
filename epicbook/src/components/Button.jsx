@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 
-const GenreButtons = ({ setType }) => {
+const GenreButtons = ({ type, setType }) => {
   return (
     <div className='div-button'>
       <Button variant="dark" className="m-1" onClick={() => setType('all')}>All</Button>

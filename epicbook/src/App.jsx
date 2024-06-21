@@ -17,7 +17,7 @@ import BookDetail from './components/BookDetail';
 import GenreButtons from './components/Button.jsx';
 
 function App() {
-  let [type, setType] = useState('all');
+  let [type, setType] = useState('');
   const [search, setSearch] = useState('');
   const handleSearch = (e) => setSearch(e.target.value);
 
@@ -39,7 +39,6 @@ function App() {
            </Routes>
         </Container>
         <MyFooter />
-
         </BrowserRouter>
       </AuthContext.Provider>
     </ThemeContext.Provider>
